@@ -1,8 +1,8 @@
 import pytest
 
-from src import params
-from src.reduce import caddq, freeze, montgomery_reduce, reduce32
-from src.rounding import decompose, make_hint, power2round, use_hint
+from mldsa import params
+from mldsa.reduce import caddq, freeze, montgomery_reduce, reduce32
+from mldsa.rounding import decompose, make_hint, power2round, use_hint
 
 
 def test_montgomery_reduce_identity():

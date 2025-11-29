@@ -2,8 +2,8 @@ import itertools
 
 import pytest
 
-from src import params
-from src.poly import (
+from mldsa import params
+from mldsa.poly import (
     poly_add,
     poly_caddq,
     poly_challenge,
@@ -28,7 +28,7 @@ from src.poly import (
     polyt1_unpack,
     poly_pointwise_montgomery,
 )
-from src.reduce import montgomery_reduce, reduce32
+from mldsa.reduce import montgomery_reduce, reduce32
 
 
 def _eta_poly():
@@ -40,7 +40,7 @@ def _t1_poly():
 
 
 def _t0_poly():
-    base = 1 << (params.D - 1)
+    base = (1 << (params.D - 1)) - 1
     return [((i % (2 * base)) - base) for i in range(params.N)]
 
 

@@ -1,8 +1,8 @@
 import pytest
 
-from src import params
-from src.poly import poly_add, poly_pointwise_montgomery
-from src.poly_vec import (
+from mldsa import params
+from mldsa.poly import poly_add, poly_pointwise_montgomery
+from mldsa.poly_vec import (
     polyvec_matrix_expand,
     polyvec_matrix_pointwise_montgomery,
     polyvecl_add,
